@@ -4,31 +4,13 @@
   <meta charset="utf-8">
   <title>Elijah Weddle — Mechatronics Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link to CSS: you can either embed or link externally -->
-  <style>
-    /* Basic reset and styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    header { background: #1a1a1a; color: white; padding: 60px 20px; text-align: center; }
-    header h1 { font-size: 3rem; margin-bottom: 20px; }
-    header p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; }
-
-    nav { background: #fff; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    nav a { margin: 0 15px; color: #1a1a1a; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #007bff; }
-
-    section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-    .about, .mission, .projects, .news { }
-    .news-item { margin-bottom: 20px; }
-    .news-item time { display: block; font-size: 0.9rem; color: #777; }
-    .news-item a { font-size: 1.2rem; color: #1a1a1a; text-decoration: none; }
-    .news-item a:hover { color: #007bff; }
-
-    footer { background: #f5f5f5; color: #555; text-align: center; padding: 40px 20px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ==========================
+       NAVIGATION
+       ========================== -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -37,49 +19,62 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- ==========================
+       HEADER / HERO
+       ========================== -->
   <header id="hero">
     <h1>Elijah Weddle</h1>
-    <p>Mechatronics Engineer. Robotics, automation, and manufacturing. Devloping solutions that create the world.</p>
+    <p>Mechatronics Engineer. Robotics, automation, and manufacturing. Developing solutions that create the world.</p>
   </header>
 
- <section id="about" class="about" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
-  <!-- Section Title with Divider -->
-  <h2 style="margin-bottom: 10px; font-size: 2rem; font-weight: 600; display: inline-block;">Summary</h2>
-  <div style="height: 3px; width: 60px; background: #007bff; margin: 10px 0 30px 0; border-radius: 2px;"></div>
+  <!-- ==========================
+       ABOUT SECTION
+       ========================== -->
+  <section id="about" class="about">
+    <h2>Summary</h2>
+    <div style="height: 3px; width: 60px; background: #007bff; margin: 10px 0 30px 0; border-radius: 2px;"></div>
 
-  <!-- Flex container for image + text -->
-  <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-    <img src="assets/profile_pic.jpeg" alt="Your Name"
-         style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); flex-shrink: 0;">
-    <p style="flex: 1; min-width: 250px; font-size: 1.1rem; line-height: 1.6;">
-      Innovative Mechatronics Engineer with over 5 years of experience bridging mechanical engineering and software ...
-    </p>
-  </div>
-</section>
-
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <!-- You can have cards or images here -->
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Short description of a mechatronics project: what problem, technologies used, results.</p>
-        <a href="link-to-project">See more →</a>
-        <img src="assets/rover.jpeg" alt="Me working on a robot" width="400">
-      </div>
-      <!-- more cards -->
+    <div class="about-container">
+      <img src="assets/profile_pic.jpeg" alt="Elijah Weddle">
+      <p>
+        Innovative Mechatronics Engineer with over 5 years of experience bridging mechanical engineering and software. 
+        Experienced in robotics, automation, CAD, and embedded systems, delivering solutions that combine hardware and software seamlessly.
+      </p>
     </div>
-
-   <div class="project-card">
-  <h3>3D Color-by-Number Tool</h3>
-  <p>Upload an image to generate a voxelized 3D color-by-number model — export as STL for 3D printing.</p>
-  <a href="color-by-number/">Try it →</a>
-  <img src="color-by-number/assets/preview.png" alt="Preview of 3D Color-by-Number" width="400">
-</div>
-
   </section>
 
+  <!-- ==========================
+       PROJECTS SECTION
+       ========================== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      
+      <div class="project-card">
+        <h3>Mars Rover</h3>
+        <p>
+          A project for an undergraduate course, Sensors and Actuators. Learned the basic principles of sensors and actuators, 
+          Ardupilot, interfacing a Raspberry Pi with an Arduino, and GPS/remote communication.
+        </p>
+        <a href="#">See more →</a>
+        <img src="assets/rover.jpeg" alt="Me working on a robot">
+      </div>
+
+      <div class="project-card">
+        <h3>3D Color-by-Number Tool</h3>
+        <p>
+          Upload an image to generate a voxelized 3D color-by-number model — export as STL for 3D printing.
+        </p>
+        <a href="color-by-number/">Try it →</a>
+        <img src="color-by-number/assets/preview.png" alt="Preview of 3D Color-by-Number">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================
+       SKILLS SECTION
+       ========================== -->
   <section id="skills" class="skills">
     <h2>Skills</h2>
     <ul>
@@ -87,49 +82,45 @@
       <li>Robotics & Controls (ROS, PID, sensor integration)</li>
       <li>CAD / Mechanical Design (SolidWorks, Fusion 360)</li>
       <li>Automation & IoT (PLC, sensors, cloud integration)</li>
-      <!-- etc -->
     </ul>
   </section>
 
+  <!-- ==========================
+       NEWS SECTION
+       ========================== -->
   <section id="news" class="news">
     <h2>News & Updates</h2>
-    <div id="news-container">
-      <!-- JS will populate this -->
-    </div>
+    <div id="news-container"></div>
   </section>
 
+  <!-- ==========================
+       CONTACT SECTION
+       ========================== -->
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">elijah.r.weddle@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-    <!-- any other links -->
+    <p>Email: <a href="mailto:elijah.r.weddle@gmail.com">elijah.r.weddle@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
   </section>
 
+  <!-- ==========================
+       FOOTER
+       ========================== -->
   <footer>
-    &copy; <!-- year --> <span id="year"></span> — Elijah Weddle. All rights reserved.
+    &copy; <span id="year"></span> — Elijah Weddle. All rights reserved.
   </footer>
 
+  <!-- ==========================
+       SCRIPTS
+       ========================== -->
   <script>
     // Update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Example: Fetch / populate news items from a JSON file or other API
+    // Populate news section
     const newsData = [
-      {
-        title: "Completed autonomous robot platform",
-        link: "#",
-        date: "2025-08-01"
-      },
-      {
-        title: "Research published on sensor fusion techniques",
-        link: "#",
-        date: "2025-05-15"
-      },
-      {
-        title: "Internship at XYZ robotics lab",
-        link: "#",
-        date: "2024-12-20"
-      }
+      { title: "Completed autonomous robot platform", link: "#", date: "2025-08-01" },
+      { title: "Research published on sensor fusion techniques", link: "#", date: "2025-05-15" },
+      { title: "Internship at XYZ robotics lab", link: "#", date: "2024-12-20" }
     ];
 
     const newsContainer = document.getElementById('news-container');
