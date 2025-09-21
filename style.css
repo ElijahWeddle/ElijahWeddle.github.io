@@ -58,6 +58,11 @@ header p {
   margin: 0 auto;
   z-index: 1; 
 }
+header h2 {
+  position: relative; /* needed for z-index to apply */
+  z-index: 1;         /* above the canvas */
+  color: #fff;        /* keep contrast with black background */
+}
 
 /* ==========================
    NAVIGATION
