@@ -28,6 +28,7 @@ a:hover {
    ========================== */
 header {
   background: #000; /* black header background */
+  z-index: -1; 
   color: #fff;      /* white text */
   padding: 200px 20px 120px; /* lower content inside header */
   text-align: center;
