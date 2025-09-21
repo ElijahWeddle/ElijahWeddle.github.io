@@ -33,7 +33,7 @@ header {
   padding: 200px 20px 120px; /* lower content inside header */
   text-align: center;
   position: relative;
-  overflow: hidden; /* hide waves outside header */
+  /* overflow: hidden; hide waves outside header */
 }
 
 header canvas {
@@ -179,26 +179,8 @@ section {
 }
 
 /* ==========================
-   NEWS SECTION
-   ========================== */
-.news-item {
-  margin-bottom: 20px;
-}
-
-.news-item time {
-  display: block;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.news-item a {
-  font-size: 1.2rem;
-  color: #1a1a1a;
-}
-
-.news-item a:hover {
-  color: #007bff;
-}
+   Works Exper
+   ========================= */
 
 /* ==========================
    FOOTER
