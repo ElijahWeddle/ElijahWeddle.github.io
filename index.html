@@ -17,7 +17,7 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#work">Work Experiences</a>
+    <a href="#news">Work Experiences</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -155,33 +155,41 @@
       newsContainer.appendChild(div);
     });
   </script>
-
 <script>
 let t = 0;
 
 function setup() {
   let canvas = createCanvas(windowWidth, 300); // match header height
-  canvas.parent("hero"); // attach canvas inside the header
+  canvas.parent("hero"); // attach inside header
 }
 
 function draw() {
-  clear(); // transparent background so header shows only wave
-  stroke(0, 255, 255); // cyan
-  strokeWeight(3);
+  clear(); // transparent background
   noFill();
 
-  beginShape();
-  for (let x = 0; x < width; x++) {
-    let y = height/2 + 50 * sin((x * 0.05) + t);
-    vertex(x, y);
-  }
-  endShape();
+  // Define multiple waves
+  const waves = [
+    {amp: 50, freq: 0.05, phase: 0, color: [0, 255, 255]},
+    {amp: 30, freq: 0.08, phase: PI/2, color: [255, 0, 255]},
+    {amp: 40, freq: 0.03, phase: PI/4, color: [255, 255, 0]}
+  ];
 
-  t += 0.05;
+  waves.forEach(w => {
+    stroke(...w.color);
+    strokeWeight(3);
+    beginShape();
+    for (let x = 0; x < width; x++) {
+      let y = height/2 + w.amp * sin((x * w.freq) + t + w.phase);
+      vertex(x, y);
+    }
+    endShape();
+  });
+
+  t += 0.05; // animate
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, 300); // keep canvas resizing with header
+  resizeCanvas(windowWidth, 300);
 }
 </script>
 
