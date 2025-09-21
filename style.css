@@ -28,7 +28,7 @@ a:hover {
    ========================== */
 header {
   background: transparent; /* remove black box */
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 120px 20px; /* a bit taller for wave space */
   text-align: center;
   position: relative;
