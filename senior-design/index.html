@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Senior Design Project — Elijah Weddle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css"> <!-- reuse root CSS -->
+</head>
+<body>
+
+  <nav>
+    <a href="../">← Back to Home</a>
+  </nav>
+
+  <header>
+    <h1>Senior Design Project</h1>
+    <p>Capstone engineering project — robotics & automation system design.</p>
+  </header>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project was my senior design capstone at [University]. 
+      Our team developed [short summary: e.g., an autonomous robotic manipulator]. 
+    </p>
+  </section>
+
+  <section>
+    <h2>Demo Videos</h2>
+    
+    <!-- Embedded YouTube video -->
+    <div style="margin-bottom: 30px;">
+      <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/VIDEO_ID" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+    </div>
+
+    <!-- Local video file -->
+    <video width="560" controls>
+      <source src="assets/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Elijah Weddle. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
