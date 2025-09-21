@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
 <head>
   <meta charset="utf-8">
   <title>Elijah Weddle — Mechatronics Engineer</title>
@@ -154,6 +156,34 @@
     });
   </script>
 
+<script>
+let t = 0;
+
+function setup() {
+  let canvas = createCanvas(windowWidth, 300); // match header height
+  canvas.parent("hero"); // attach canvas inside the header
+}
+
+function draw() {
+  clear(); // transparent background so header shows only wave
+  stroke(0, 255, 255); // cyan
+  strokeWeight(3);
+  noFill();
+
+  beginShape();
+  for (let x = 0; x < width; x++) {
+    let y = height/2 + 50 * sin((x * 0.05) + t);
+    vertex(x, y);
+  }
+  endShape();
+
+  t += 0.05;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, 300); // keep canvas resizing with header
+}
+</script>
 
 </body>
 </html>
