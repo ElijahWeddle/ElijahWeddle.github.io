@@ -25,8 +25,9 @@
        HEADER / HERO
        ========================== -->
   <header id="hero">
-    <h1>Elijah Weddle</h1>
+    <h1>Test 1</h1>
     <p>Mechatronics Engineer. Robotics, automation, and manufacturing. Developing solutions that create the world.</p>
+
   </header>
 
   <!-- ==========================
@@ -179,12 +180,12 @@ function draw() {
 
   // Define multiple waves
   const waves = [
-    {amp: 100, freq: 0.15, phase: 0, color: [0, 255, 255]},
-    {amp: 100, freq: 0.15, phase: PI/2, color: [255, 0, 255]},
-    {amp: 100, freq: 0.15, phase: PI/4, color: [255, 255, 0]},
-    {amp: 100, freq: 0.15, phase: PI, color: [0, 255, 255]},
-    {amp: 100, freq: 0.15, phase: 3*PI/2, color: [255, 0, 255]},
-    {amp: 100, freq: 0.15, phase: 4*PI/3, color: [255, 255, 0]}
+    {amp: 150, freq: 0.02, phase: 0, color: [0, 255, 255]},
+    {amp: 120, freq: 0.02, phase: PI/2, color: [255, 0, 255]},
+    {amp: 110, freq: 0.02, phase: PI/4, color: [255, 255, 0]},
+    {amp: 100, freq: 0.02, phase: PI, color: [0, 255, 255]},
+    {amp: 140, freq: 0.02, phase: 3*PI/2, color: [255, 0, 255]},
+    {amp: 130, freq: 0.02, phase: 4*PI/3, color: [255, 255, 0]}
   ];
 
   waves.forEach(w => {
@@ -198,7 +199,7 @@ function draw() {
     endShape();
   });
 
-  t += 0.02; // animate
+  t += 0.03; // animate
 }
 
 function windowResized() {
