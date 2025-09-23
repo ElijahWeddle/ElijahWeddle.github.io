@@ -17,7 +17,7 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#news">Work Experiences</a>
+    <a href="#experience">Work Experiences</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -25,7 +25,7 @@
        HEADER / HERO
        ========================== -->
   <header id="hero">
-    <h1>Test 1</h1>
+    <h1>Elijah Weddle</h1>
     <p>Mechatronics Engineer. Robotics, automation, and manufacturing. Developing solutions that create the world.</p>
 
   </header>
@@ -105,12 +105,22 @@
   </section>
 
   <!-- ==========================
-       NEWS SECTION
+       WORK EXPERIENCES
        ========================== -->
-  <section id="news" class="news">
-    <h2>Work Experiences</h2>
-    <div id="news-container"></div>
-  </section>
+ <section id="experience">
+  <h2>Work Experience</h2>
+  <div class="experience-list">
+    <a href="https://www.company1.com" target="_blank">
+      <img src="images/company1-logo.png" alt="Company 1 Logo">
+    </a>
+    <a href="https://www.company2.com" target="_blank">
+      <img src="images/company2-logo.png" alt="Company 2 Logo">
+    </a>
+    <a href="https://www.company3.com" target="_blank">
+      <img src="images/company3-logo.png" alt="Company 3 Logo">
+    </a>
+  </div>
+</section>
 
   <!-- ==========================
        CONTACT SECTION
@@ -135,12 +145,7 @@
     // Update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Populate news section
-    const newsData = [
-      { title: "The Boeing Company", link: "https://www.boeing.com", date: "01/17/2025" },
-      { title: "Bastian Solutions", link: "#", date: "09/16/2024" },
-      { title: "Weigmann Associates", link: "https://www.wiegmannassoc.com", date: "05/06/2024" }
-    ];
+    
 
     const newsContainer = document.getElementById('news-container');
     newsData.forEach(item => {
@@ -199,7 +204,7 @@ function draw() {
     endShape();
   });
 
-  t += 0.03; // animate
+  t += 0.02; // animate
 }
 
 function windowResized() {
