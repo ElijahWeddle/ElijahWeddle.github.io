@@ -31,8 +31,8 @@ header {
   color: #fff;      /* white text */
   padding: 200px 20px 120px; /* lower content inside header */
   text-align: center;
-  position: relative;
-  overflow: hidden; /* hide waves outside header */
+  position: relative; /* stacking context */
+  overflow: hidden;   /* hide waves outside header */
 }
 
 header canvas {
@@ -41,24 +41,26 @@ header canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* behind text */
+  z-index: -1;          /* waves behind everything */
   pointer-events: none; /* allow clicks on header content */
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1; /* text always above waves */
 }
 
 header h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  z-index: 1; 
 }
 
 header p {
-  position: relative; 
   font-size: 1.3rem;
   max-width: 700px;
   margin: 0 auto;
-  z-index: 1; 
 }
-
 
 /* ==========================
    NAVIGATION
@@ -179,8 +181,28 @@ section {
 }
 
 /* ==========================
-   Works Exper
-   ========================= */
+   WORK EXPERIENCES SECTION
+   ========================== */
+#work {
+  padding-top: 100px;
+}
+
+.work-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.work-logos a img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.work-logos a img:hover {
+  transform: scale(1.1);
+}
 
 /* ==========================
    FOOTER
