@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Military service background for Elijah Weddle.">
+  <title>Military Service | Elijah Weddle</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Military page navigation">
+    <a href="../">Back to Home</a>
+    <a href="#overview">Overview</a>
+    <a href="#photos">Photos</a>
+  </nav>
+
+  <header class="hero project-hero">
+    <div class="hero-content">
+      <p class="eyebrow">Experience</p>
+      <h1>Military Service</h1>
+      <p>Discipline, technical execution, and responsibility under real operating constraints.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section about">
+      <div class="section-heading">
+        <p class="eyebrow">Background</p>
+        <h2>Leadership and field experience alongside engineering work.</h2>
+      </div>
+      <div class="about-container">
+        <img src="assets/army_pfp.jpg" alt="Elijah Weddle in military uniform">
+        <p>
+          Military experience has shaped my approach to engineering: communicate clearly, prepare carefully,
+          work safely, and keep the mission moving when conditions change.
+        </p>
+      </div>
+    </section>
+
+    <section id="photos" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Photos</p>
+        <h2>Service media</h2>
+      </div>
+      <div class="project-list">
+        <article class="project-card">
+          <img src="assets/range_tower.JPG" alt="Range tower at a military training site">
+          <div>
+            <h3>Training Site</h3>
+            <p>Field environment where planning, safety, and execution all matter.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Elijah Weddle. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

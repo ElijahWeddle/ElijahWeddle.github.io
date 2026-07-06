@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>3D Color by Number</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototype color-by-number image converter by Elijah Weddle.">
+  <title>Color-by-Number Image Converter | Elijah Weddle</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>3D Color-by-Number Project</h1>
-  <p>Upload an image to generate a voxelized 3D color-by-number model.</p>
-  
-  <input type="file" id="imageUpload" accept="image/*">
-  <div id="viewer"></div>
-  
+  <nav>
+    <a href="../">Back to Home</a>
+  </nav>
+
+  <main class="app-shell">
+    <section class="tool-panel">
+      <p class="eyebrow">Prototype</p>
+      <h1>Color-by-Number Image Converter</h1>
+      <p>Upload an image to preview the source artwork for a voxelized 3D color-by-number model.</p>
+
+      <label class="upload-control" for="imageUpload">
+        <span>Choose image</span>
+        <input type="file" id="imageUpload" accept="image/*">
+      </label>
+    </section>
+
+    <section class="viewer-panel" aria-live="polite">
+      <div id="viewer">
+        <img src="assets/preview.png" alt="Default preview for the color-by-number converter">
+      </div>
+      <p id="status">Preview image loaded.</p>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
