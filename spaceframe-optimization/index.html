@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spaceframe topology optimization machine learning project by Elijah Weddle, Johnathan Clayton, and Khushi Kapoor.">
+  <title>Spaceframe Topology Optimization | Elijah Weddle</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Project navigation">
+    <a href="../">Back to Home</a>
+    <a href="#overview">Overview</a>
+    <a href="#approach">Approach</a>
+    <a href="#results">Results</a>
+    <a href="#artifacts">Artifacts</a>
+  </nav>
+
+  <header class="hero project-hero">
+    <div class="hero-content">
+      <p class="eyebrow">Machine Learning | Structural Optimization</p>
+      <h1>Spaceframe Topology Optimization</h1>
+      <p>Physics-informed optimization for lightweight 2D truss structures under load and support constraints.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section case-intro">
+      <div class="section-heading">
+        <p class="eyebrow">Final Project</p>
+        <h2>Designing lighter spaceframes with differentiable physics.</h2>
+      </div>
+      <div class="case-grid">
+        <div>
+          <p class="page-copy">
+            This team project explored whether machine learning methods could optimize truss and spaceframe
+            structures by balancing two competing goals: satisfying static equilibrium and reducing member mass.
+            The model treated a 2D structure as a connected graph, then adjusted member forces and movable node
+            positions through a physics-informed loss function.
+          </p>
+          <p class="page-copy">
+            The work was completed with Johnathan Clayton and Khushi Kapoor. My focus was LaTeX integration,
+            visualization of optimization results, and presenting the data and results sections.
+          </p>
+        </div>
+        <ul class="case-facts" aria-label="Project facts">
+          <li><strong>Domain</strong><span>Structural optimization</span></li>
+          <li><strong>Tools</strong><span>Python, PyTorch, NumPy, Matplotlib</span></li>
+          <li><strong>Method</strong><span>Adam optimizer with physics and mass losses</span></li>
+          <li><strong>Output</strong><span>Optimized truss geometry, force plots, loss curves</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="approach" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Approach</p>
+        <h2>A graph-based truss model with physics in the objective.</h2>
+      </div>
+      <div class="process-list">
+        <article>
+          <h3>Generate Design Cases</h3>
+          <p>Start with fixed supports, loaded nodes, free nodes, and candidate connections in a controlled 2D layout.</p>
+        </article>
+        <article>
+          <h3>Evaluate Equilibrium</h3>
+          <p>Resolve member forces into x and y components and penalize residual force imbalance at each non-fixed node.</p>
+        </article>
+        <article>
+          <h3>Minimize Mass</h3>
+          <p>Estimate cylindrical member weight from force, length, Young's modulus, and density, then combine it with the physics loss.</p>
+        </article>
+        <article>
+          <h3>Visualize Convergence</h3>
+          <p>Plot structure snapshots and loss curves over training steps to make optimizer behavior diagnosable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Results</p>
+        <h2>Optimization outputs and training behavior.</h2>
+      </div>
+      <div class="media-feature">
+        <img src="assets/optimized-bridge.png" alt="Optimized bridge truss after 500000 optimizer steps with fixed, free, and loaded nodes labeled.">
+        <div>
+          <h3>Optimized Bridge Case</h3>
+          <p>
+            The optimizer converged from a dense candidate network toward a readable load path, with thicker members
+            indicating higher force magnitudes and low-force connections fading into secondary structure.
+          </p>
+        </div>
+      </div>
+      <div class="project-list media-list">
+        <article class="project-card">
+          <img src="assets/truss-optimization.gif" alt="Animated truss optimization showing geometry changes over training snapshots.">
+          <div>
+            <h3>Training Snapshots</h3>
+            <p>Animation of structural geometry and member force changes across optimizer checkpoints.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="assets/loss-curves.gif" alt="Animated total, physics, and mass loss curves over optimizer steps.">
+          <div>
+            <h3>Loss Curves</h3>
+            <p>Tracking total loss, physics residual, and mass loss helped tune the tradeoff between feasibility and weight.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="assets/cantilever-result.png" alt="Optimized cantilever truss result with node labels and member force magnitudes.">
+          <div>
+            <h3>Cantilever Case</h3>
+            <p>A second load case used the same optimization framework to evaluate how geometry adapts to different constraints.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="artifacts" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Artifacts</p>
+        <h2>Report and implementation notes.</h2>
+      </div>
+      <p class="page-copy">
+        The final report documents the project motivation, related work, model formulation, experiments, limitations,
+        and future extensions toward 3D spaceframes and stronger pruning rules.
+      </p>
+      <a class="button-link" href="assets/final-project-report.docx">Download final report</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Elijah Weddle. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
