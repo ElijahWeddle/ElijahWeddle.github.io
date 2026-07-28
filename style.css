@@ -445,6 +445,21 @@ h3 {
   object-fit: contain;
 }
 
+.company-mark {
+  align-items: center;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  font-size: 1.35rem;
+  font-weight: 900;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  max-width: 96px;
+  width: 100%;
+}
+
 .experience-card span {
   display: block;
   font-weight: 800;
@@ -548,6 +563,7 @@ footer {
   }
 
   .experience-card {
+    justify-items: center;
     text-align: center;
   }
 }
