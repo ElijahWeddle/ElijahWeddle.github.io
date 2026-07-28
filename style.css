@@ -421,6 +421,12 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.education-list {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .experience-card {
   align-items: center;
   background: var(--panel);
@@ -433,6 +439,17 @@ h3 {
   min-height: 180px;
   padding: 24px;
   text-align: left;
+}
+
+.education-card {
+  align-items: start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 76px minmax(0, 1fr);
+  padding: 22px;
 }
 
 .experience-card:hover {
@@ -470,6 +487,15 @@ h3 {
   color: var(--muted);
 }
 
+.education-card h3 {
+  font-size: 1.16rem;
+  margin-bottom: 8px;
+}
+
+.education-card p {
+  color: var(--muted);
+}
+
 .contact p {
   color: var(--muted);
   margin-bottom: 8px;
@@ -495,7 +521,8 @@ footer {
 
 @media (max-width: 860px) {
   .project-list,
-  .skill-grid {
+  .skill-grid,
+  .education-list {
     grid-template-columns: 1fr;
   }
 
@@ -549,7 +576,8 @@ footer {
   .about-container,
   .project-card,
   .experience-list,
-  .experience-card {
+  .experience-card,
+  .education-card {
     grid-template-columns: 1fr;
   }
 
@@ -562,7 +590,8 @@ footer {
     padding: 0 18px 20px;
   }
 
-  .experience-card {
+  .experience-card,
+  .education-card {
     justify-items: center;
     text-align: center;
   }
