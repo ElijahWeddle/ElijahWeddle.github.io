@@ -217,9 +217,9 @@ h3 {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
-  grid-template-rows: auto 1fr;
   overflow: hidden;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
@@ -234,7 +234,8 @@ h3 {
 .project-card video {
   aspect-ratio: 16 / 10;
   background: #dce3eb;
-  height: 100%;
+  flex: 0 0 auto;
+  height: auto;
   object-fit: cover;
   width: 100%;
 }
@@ -242,6 +243,7 @@ h3 {
 .project-card div {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 12px;
   padding: 0 20px 22px;
 }
@@ -533,14 +535,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .project-card {
-    grid-template-columns: minmax(220px, 0.7fr) 1fr;
-    grid-template-rows: auto;
-  }
-
-  .project-card div {
-    padding: 20px 20px 20px 0;
-  }
 }
 
 @media (max-width: 640px) {
@@ -574,7 +568,6 @@ footer {
   }
 
   .about-container,
-  .project-card,
   .experience-list,
   .experience-card,
   .education-card {
